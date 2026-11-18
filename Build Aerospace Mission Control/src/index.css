@@ -2,17 +2,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #07090c;
-  --panel: #0d1116;
-  --panel-2: #11171e;
-  --ink: #f3f5f7;
-  --muted: #8995a3;
-  --line: #202833;
-  --line-soft: rgba(137, 149, 163, 0.16);
-  --red: #e84a2a;
-  --red-bright: #ff5b38;
-  --blue: #85b7c9;
-  --green: #70c99b;
+  --bg: #0b0e12;
+  --panel: #11161c;
+  --panel-2: #171e26;
+  --ink: #f2f3f4;
+  --muted: #a4adb8;
+  --line: #2a333e;
+  --line-soft: rgba(164, 173, 184, 0.16);
+  --red: #d65b43;
+  --red-bright: #eb7056;
+  --blue: #a2bac8;
+  --green: #8db9a2;
 }
 
 @layer base {
@@ -244,7 +244,7 @@ svg {
 }
 .hero h1 {
   margin: 29px 0 0;
-  font: 800 clamp(68px, 7.2vw, 106px)/0.82 "Barlow Condensed";
+  font: 800 clamp(64px, 6.2vw, 92px)/0.88 "Barlow Condensed";
   letter-spacing: -0.035em;
 }
 .hero h1 span {
@@ -1335,7 +1335,7 @@ input[type="range"] {
   padding: 95px 0;
   background:
     linear-gradient(90deg, rgba(7, 9, 12, 0.95), rgba(7, 9, 12, 0.65)),
-    url("https://images.unsplash.com/photo-1630694093867-4b947d812bf0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=75&w=1600")
+    url("https://images-assets.nasa.gov/image/PIA17948/PIA17948~orig.jpg")
       center/cover;
   border-block: 1px solid var(--line);
 }
@@ -2105,4 +2105,187 @@ footer {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.mission-status {
+  color: #a4adb8;
+  font-size: 9px;
+}
+
+.mission-status i {
+  background: var(--blue);
+  box-shadow: none;
+}
+
+.mission-status span {
+  color: var(--blue);
+}
+
+.hero {
+  min-height: 660px;
+}
+
+.hero-visual {
+  min-height: 660px;
+}
+
+.hero-grid {
+  opacity: 0.08;
+}
+
+.target-ring {
+  display: none;
+}
+
+.hero-body,
+.section-title > p,
+.interior-hero p,
+.number-list aside p,
+.timeline p,
+.system-panel p,
+.crew-grid p,
+.question-list p,
+.principles-grid p,
+.gallery-grid p,
+.classroom-steps p,
+.safety-note p,
+.reference-block > p {
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.hero-lead {
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.section-title h2 {
+  line-height: 1.05;
+  text-transform: none;
+}
+
+.interior-hero h1 {
+  line-height: 0.98;
+}
+
+.kicker {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.mission-stamp > * {
+  font-size: 8px;
+}
+
+.visual-data,
+.hero-caption {
+  font-size: 9px;
+}
+
+.facts-grid h3,
+.path-grid p,
+.crew-grid small,
+.timeline p,
+.planner-result > small,
+.system-tabs button,
+.gallery-grid small,
+.reference-block article p,
+.credit-table span {
+  font-size: 12px;
+}
+
+.facts-grid p,
+.source-note {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.path-grid h3,
+.timeline h3,
+.crew-grid h3,
+.question-list h3,
+.principles-grid h3,
+.gallery-grid h3,
+.classroom-steps h3,
+.reference-block > h2 {
+  text-transform: none;
+  line-height: 1.15;
+}
+
+.credit-table a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 820px) {
+  .hero {
+    min-height: 0;
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-visual {
+    min-height: 420px;
+  }
+}
+
+nav button,
+.kicker,
+.primary-btn,
+.quiet-btn,
+.mission-stamp > *,
+.visual-data,
+.hero-caption,
+.discipline-row h3,
+.facts-grid h3,
+.number-list aside b,
+.planner-controls > label,
+.planner-controls button span,
+.fuel-key > b,
+.system-panel small,
+.system-panel h3,
+.system-tabs button,
+.crew-id,
+.expertise-banner h2,
+.source-cta button,
+.gallery-grid small,
+.classroom-steps h3,
+.safety-note b,
+.document-row button,
+.reference-block article b,
+.credit-table .table-head span,
+.page-links span,
+.page-links b,
+.footer-grid > div:nth-child(3),
+.footer-grid > button {
+  text-transform: none;
+}
+
+nav button,
+.kicker,
+.primary-btn,
+.quiet-btn,
+.mission-stamp > *,
+.visual-data,
+.hero-caption,
+.page-links span,
+.page-links b {
+  letter-spacing: 0.02em;
 }

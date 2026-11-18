@@ -8,55 +8,55 @@ const pages: { id: Page; label: string }[] = [
   { id: "spacecraft", label: "Spacecraft" },
   { id: "crew", label: "Crew" },
   { id: "research", label: "Research" },
-  { id: "community", label: "Community" },
-  { id: "reference", label: "Reference" },
+  { id: "community", label: "Education" },
+  { id: "reference", label: "Sources" },
 ];
 
 const meta: Record<Page, { title: string; description: string }> = {
   overview: {
-    title: "AURORA | Crewed Mission to Mars",
+    title: "AURORA | A Human Mars Exploration Concept",
     description:
-      "AURORA is a fictional concept for a mission to Mars. Explore the imaginary mission, spacecraft, crew and the questions we want to answer.",
+      "An independent educational concept exploring the science, systems, and open questions behind human exploration of Mars.",
   },
   mission: {
     title: "Mission | AURORA",
     description:
-      "The goals, timeline and trip-length planner for AURORA-1, a fictional crewed mission to Mars.",
+      "Explore the mission phases and use an illustrative transit-time calculator for a hypothetical crewed Mars mission.",
   },
   spacecraft: {
     title: "Spacecraft | AURORA",
     description:
-      "Picture of the main 6 systems in the AURORA space concept with interactive learning tools.",
+      "Explore the major systems a crewed Mars mission would need and the engineering questions they raise.",
   },
   crew: {
     title: "Crew | AURORA",
     description:
-      "Meet the four fictional crew members of AURORA-1 and the roles a real, succesful Mars mission would need.",
+      "Learn about the complementary professional roles that could contribute to a future human Mars mission.",
   },
   research: {
     title: "Research | AURORA",
-    description: "6 open questions about Mars that the AURORA crew could answer.",
+    description: "Open questions in Mars science, exploration, and planetary protection.",
   },
   community: {
-    title: "Community | AURORA",
+    title: "Education | AURORA",
     description:
-      "Sample classroom projects and exploration into school communities to help younger generations know about this.",
+      "Classroom activities and ideas for introducing students to Mars exploration.",
   },
   reference: {
-    title: "Reference | AURORA",
+    title: "Sources | AURORA",
     description:
-      "Sources, image credits, copyright notes and project documents for the AURORA website.",
+      "Fact sources, image credits and project notes for the AURORA educational concept.",
   },
 };
 
 const images = {
-  mars: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=90&w=1800",
+  mars: "https://images-assets.nasa.gov/image/PIA00407/PIA00407~large.jpg",
   surface:
-    "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=86&w=1600",
+    "https://images-assets.nasa.gov/image/PIA17948/PIA17948~orig.jpg",
   planet:
-    "https://images.unsplash.com/photo-1630694093867-4b947d812bf0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=86&w=1400",
+    "https://images-assets.nasa.gov/image/PIA14832/PIA14832~large.jpg",
   terrain:
-    "https://images.unsplash.com/photo-1614935981447-893ce3858657?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=86&w=1400",
+    "https://images-assets.nasa.gov/image/PIA16161/PIA16161~orig.jpg",
 };
 
 function Arrow({ back = false }: { back?: boolean }) {
@@ -134,13 +134,11 @@ function OrbitDiagram() {
   return (
     <div className="orbit-diagram" role="img" aria-labelledby="orbit-title orbit-description">
       <span id="orbit-title" className="sr-only">
-        Top-down map of the inner solar system with a simplified Earth-to-Mars path
+      Simplified diagram of planetary orbits and a hypothetical Earth-to-Mars transfer
       </span>
       <span id="orbit-description" className="sr-only">
-        The Sun is at the center. Around it, are the orbits of the rest of the solar system besides
-        earth. A dashed path leaves Earth's orbit on the left, swings around the Sun, and meets
-        Mars's orbit on the right, where Mars will be when the spacecraft arrives. A second, solid
-        Mars shows where the planet is at launch.
+        The diagram is illustrative and not to scale. A dashed line shows one possible transfer
+        between Earth's and Mars's orbits; it is not a trajectory or mission plan.
       </span>
       <div className="orbit o-mercury" />
       <div className="orbit o-venus" />
@@ -155,17 +153,17 @@ function OrbitDiagram() {
       <svg className="flight-path" viewBox="0 0 700 360" preserveAspectRatio="none">
         <path d="M145 238 C265 40 480 52 594 175" />
       </svg>
-      <span className="path-label">AURORA TRANSFER // ENERGY-EFFICIENT PATH</span>
+      <span className="path-label">Illustrative orbital transfer · not to scale</span>
     </div>
   );
 }
 
 function Overview({ go }: { go: (page: Page) => void }) {
   const facts = [
-    ["01", "One Mars day", "24 h 37 min", "Called a “sol.” Close to an Earth day."],
-    ["02", "Surface gravity", "3.7 m/s²", "About 38% of what you feel on Earth."],
-    ["03", "Atmosphere", "95% CO₂", "Mostly carbon dioxide, so humans cannot breathe it."],
-    ["04", "Width", "6,794 km", "About half the width of Earth."],
+    ["01", "Solar day", "24.6 hours", "A Martian day is called a sol."],
+    ["02", "Surface gravity", "3.71 m/s²", "About 38% of Earth's surface gravity."],
+    ["03", "Atmosphere", "About 95% CO₂", "Mars has a very thin, carbon-dioxide-rich atmosphere."],
+    ["04", "Diameter", "About 6,780 km", "Mars is about half Earth's diameter."],
     ["05", "One Mars year", "687 days", "A little under two Earth years."],
   ];
   const paths: { id: Page; no: string; title: string; text: string }[] = [
@@ -173,31 +171,31 @@ function Overview({ go }: { go: (page: Page) => void }) {
       id: "mission",
       no: "01",
       title: "Mission",
-      text: "Goals, a timeline from launch to return, and a planner where you set the length of the trip.",
+      text: "Explore mission phases, constraints and an illustrative transit-time calculator.",
     },
     {
       id: "spacecraft",
       no: "02",
       title: "Spacecraft",
-      text: "An interactive diagram of the six systems that keep four people alive.",
+      text: "Explore the systems and engineering challenges behind a crewed mission.",
     },
     {
       id: "crew",
       no: "03",
       title: "Crew",
-      text: "Meet the four fictional crew members and the jobs they would do.",
+      text: "Learn about the different roles a human exploration mission would require.",
     },
     {
       id: "research",
       no: "04",
       title: "Research",
-      text: "Questions about Mars and what we still need to learn.",
+      text: "Explore open questions about Mars science and future exploration.",
     },
     {
       id: "community",
       no: "05",
-      title: "Community",
-      text: "Sample school projects and ideas for sharing Mars exploration with a classroom, and the new generation.",
+      title: "Education",
+      text: "Find approachable classroom prompts for exploring Mars.",
     },
   ];
 
@@ -205,49 +203,54 @@ function Overview({ go }: { go: (page: Page) => void }) {
     <>
       <section className="hero wrap">
         <div className="hero-copy">
-          <Kicker index="001">A fictional Mars mission</Kicker>
+          <Kicker index="001">An independent educational concept</Kicker>
           <h1>
-            FOUR PEOPLE.
+            A human
             <br />
-            <span>ONE PLANET.</span>
+            <span>mission to Mars.</span>
           </h1>
-          <p className="hero-lead">Almost 1 year, a crewed mission of 4, hoping to land on Mars.</p>
+          <p className="hero-lead">
+            What would it take to send people to Mars—and bring them safely home?
+          </p>
           <p className="hero-body">
-            It takes a lot of work to send a crew to and from Mars. Follow AURORA as we break
-            boundaries.
+            Explore the science, systems and difficult trade-offs behind human exploration of the
+            Red Planet. AURORA is a concept project, not a real mission or flight plan.
           </p>
           <div className="hero-actions">
             <button className="primary-btn" onClick={() => go("mission")}>
-              Follow the mission <Arrow />
+              Explore the mission <Arrow />
             </button>
             <button className="quiet-btn" onClick={() => go("spacecraft")}>
               Explore the spacecraft <Arrow />
             </button>
           </div>
           <div className="mission-stamp">
-            <span>AURORA–1</span>
-            <b>MISSION CONCEPT</b>
-            <i>2037 // MARS</i>
+            <span>AURORA</span>
+            <b>Educational concept</b>
+            <i>Human Mars exploration</i>
           </div>
         </div>
         <div className="hero-visual">
-          <img src={images.mars} alt="Mars against the blackness of space" />
+          <img
+            src={images.mars}
+            alt="Global color view of Mars assembled from NASA Viking mission images"
+          />
           <div className="hero-grid" />
           <div className="target-ring" />
           <span className="visual-data top">
-            TARGET // MARS
+            Destination: Mars
             <br />
-            RANGE 225M KM
+            NASA archive image
           </span>
           <span className="visual-data bottom">
-            ORBITAL INSERTION
+            Mars
             <br />
-            VECTOR NOMINAL
+            Global view
           </span>
           <div className="hero-caption">
             <span>01</span>
             <p>Destination profile</p>
-            <b>THE RED PLANET</b>
+            <b>The red planet</b>
           </div>
         </div>
       </section>
@@ -257,8 +260,8 @@ function Overview({ go }: { go: (page: Page) => void }) {
           <SectionTitle
             kicker="Flight architecture"
             index="01"
-            title="A path across the inner solar system."
-            intro="Here’s a Top-down view of our solar system. Dashed line is a simplified energy-efficient path we will be taking ofr the AURORA mission (planets are not to scale)"
+            title="A journey shaped by orbital mechanics."
+            intro="Earth and Mars are moving targets. A transfer depends on their positions, the spacecraft and mission goals. This simplified diagram is for context only—not a flight trajectory."
           />
           <OrbitDiagram />
         </div>
@@ -268,8 +271,8 @@ function Overview({ go }: { go: (page: Page) => void }) {
         <SectionTitle
           kicker="Mission disciplines"
           index="02"
-          title="Mars Space Exploration Requires Many Jobs"
-          intro="Science, Engineering, Medicine, and Leadership all contribute to a successful space exploration and research mission"
+          title="Exploration takes a team."
+          intro="Science, engineering, medicine and mission operations all contribute to planning and supporting human exploration."
         />
         <div className="discipline-row">
           {["Science", "Engineering", "Medicine", "Leadership"].map((item, i) => (
@@ -288,7 +291,7 @@ function Overview({ go }: { go: (page: Page) => void }) {
             kicker="Field notes"
             index="03"
             title="Five things to know about the destination"
-            intro="Figures from the European Space Agency’s Mars fact page. See the Reference page."
+            intro="A few useful reference facts about Mars. Values are rounded; sources are listed on the Sources page."
           />
           <div className="facts-grid">
             {facts.map(([no, label, value, note]) => (
@@ -301,7 +304,7 @@ function Overview({ go }: { go: (page: Page) => void }) {
             ))}
           </div>
           <p className="source-note">
-            NASA/JPL-Caltech, PIA 17948 — Martian landscape with rocks(stereo). NASA image record.
+            Mars imagery is from NASA missions. See Sources for image credits and links.
           </p>
         </div>
       </section>
@@ -327,34 +330,34 @@ function Overview({ go }: { go: (page: Page) => void }) {
 
 const timeline = [
   {
-    stage: "Stage 1 · Before launch",
-    title: "Prepare and wait for the window",
-    text: "Earth and Mars line up well for a trip only about once every 26 months, so missions must launch in a short window.",
+    stage: "Phase 1 · Planning",
+    title: "Design around the mission",
+    text: "Science goals, crew health, launch systems, landing capability and return plans all shape the mission. Many of these challenges remain open.",
   },
   {
-    stage: "Stage 2 · Outbound",
-    title: "The long way out",
-    text: "AURORA-1 can pick a faster or slower route. A NASA planning study described a fast trajectory of about 180 days. How crews stay healthy and motivated for months in microgravity is still being studied.",
+    stage: "Phase 2 · Departure",
+    title: "Travel beyond Earth",
+    text: "A spacecraft would leave Earth and spend months in transit. Duration depends on the trajectory, propulsion and launch opportunity.",
   },
   {
-    stage: "Stage 3 · Arrival",
-    title: "Enter orbit and descend",
-    text: "A lander separates and carries the crew down. Mars’s thin atmosphere gives only some braking, which makes heavy landings hard.",
+    stage: "Phase 3 · Arrival",
+    title: "Enter, descend and land",
+    text: "Mars's thin atmosphere makes slowing down difficult, especially for heavy payloads. Landing people safely remains a major engineering challenge.",
   },
   {
-    stage: "Stage 4 · Surface",
-    title: "Work on Mars",
-    text: "Crew collect samples, test equipment and check for water ice. Messages to and from Earth take many minutes, so the crew must decide many things themselves.",
+    stage: "Phase 4 · Surface operations",
+    title: "Work with limited support",
+    text: "A crew could conduct science and maintain equipment, but would need to operate with communication delays and limited help from Earth.",
   },
   {
-    stage: "Stage 5 · Return",
-    title: "Wait, launch, and fly home",
-    text: "The trip home also depends on where Earth and Mars are in their orbits, so crews may need to stay for a long time.",
+    stage: "Phase 5 · Return",
+    title: "Leave Mars and travel home",
+    text: "A complete mission needs a reliable way to depart Mars and return the crew to Earth. The surface vehicle, supplies and return plan must work together.",
   },
   {
-    stage: "Stage 6 · After landing",
-    title: "Recovery and review",
-    text: "Doctors check the crew, and engineers study what worked, so the next mission can be safer.",
+    stage: "Phase 6 · Recovery",
+    title: "Support the crew after landing",
+    text: "Medical recovery, mission review and analysis of returned samples and data would help scientists and engineers learn from the mission.",
   },
 ];
 
@@ -367,18 +370,18 @@ function Mission({ go }: { go: (page: Page) => void }) {
     <>
       <InteriorHero
         index="01"
-        kicker="Mission case"
-        title="AURORA-1: THE PLAN"
-        text="A fictional crewed landing on Mars, made to show how a real mission would fit together."
+        kicker="Mission overview"
+        title="The challenges of a human Mars mission"
+        text="A high-level look at the phases and constraints of a hypothetical crewed mission. This concept is not a proposed or approved flight plan."
         image={images.surface}
       />
       <section className="content-section wrap two-col">
         <SectionTitle kicker="Goals and limits" index="01" title="What we try to do" />
         <div className="number-list">
           {[
-            "Land four people on Mars, let them work there, and bring them home safely.",
-            "Study Mars’s rocks and ice to learn whether the planet was ever habitable.",
-            "Test how people, machines and teamwork cope with long distance.",
+            "Understand the systems needed to transport a crew to Mars and return them safely.",
+            "Study Martian geology and past environments that may have supported microbial life.",
+            "Examine the medical, operational and technical challenges of working far from Earth.",
           ].map((text, i) => (
             <p key={text}>
               <span>0{i + 1}</span>
@@ -388,8 +391,9 @@ function Mission({ go }: { go: (page: Page) => void }) {
           <aside>
             <b>What this project does not cover</b>
             <p>
-              This is not an engineering design. There is no budget, launch date or tested hardware.
-              The route and schedule are examples, not plans for a real mission.
+              AURORA is an educational concept, not an engineering design. It has no approved
+              hardware, budget, schedule or launch date. The examples on this site are not mission
+              recommendations.
             </p>
           </aside>
         </div>
@@ -410,8 +414,7 @@ function Mission({ go }: { go: (page: Page) => void }) {
             ))}
           </div>
           <p className="source-note">
-            NASA/JPL-Caltech, PIA 14832 — Artist’s concept of Curiosity approaching Mars. This
-            depicts a robotic mission, not AURORA. NASA image record.
+            Illustrative imagery; see Sources for the image credits.
           </p>
         </div>
       </section>
@@ -420,33 +423,27 @@ function Mission({ go }: { go: (page: Page) => void }) {
           kicker="Try it"
           index="03"
           title="Trip-length planner"
-          intro="Choose a route and a stay on Mars. The planner adds up how long the crew would be away from Earth."
+          intro="Adjust the assumed one-way transit and surface stay to see how the arithmetic changes. Real mission durations depend on orbital geometry, propulsion and mission design."
         />
         <div className="planner-grid">
           <div className="planner-controls">
-            <label>Route (each way)</label>
+            <label>Illustrative one-way transit</label>
             <button className={fast ? "selected" : ""} onClick={() => setFast(true)}>
-              <span>Faster route</span>
+              <span>Short transit</span>
               <b>about 180 days</b>
-              <p>Matches the fast trajectory in a NASA planning study. Needs more fuel.</p>
+              <p>A simplified example, not a selected trajectory.</p>
             </button>
             <button className={!fast ? "selected" : ""} onClick={() => setFast(false)}>
-              <span>Slower route</span>
+              <span>Long transit</span>
               <b>about 260 days</b>
-              <p>A round number we chose to show the trade-off. Uses less fuel.</p>
+              <p>A simplified example to compare with the shorter transit.</p>
             </button>
             <div className="fuel-key">
-              <b>Fuel consumption</b>
+              <b>About these examples</b>
               <p>
-                Relative fuel use for each route; exact amounts depend on spacecraft design and
-                mission details.
+                These rounded values are for exploring the calculator only. They are not mission
+                estimates.
               </p>
-              <span>
-                Faster route <i className="fuel high" />
-              </span>
-              <span>
-                Slower route <i className="fuel low" />
-              </span>
             </div>
             <label htmlFor="stay">Time on Mars: {stay} days</label>
             <input
@@ -460,10 +457,10 @@ function Mission({ go }: { go: (page: Page) => void }) {
             />
           </div>
           <div className="planner-result">
-            <span>ESTIMATED MISSION DURATION</span>
+            <span>Estimated mission duration</span>
             <div className="duration">
               <strong>{total}</strong>
-              <b>DAYS TOTAL</b>
+              <b>days total</b>
             </div>
             <div className="duration-grid">
               <p>
@@ -483,10 +480,11 @@ function Mission({ go }: { go: (page: Page) => void }) {
                 months total
               </p>
             </div>
-            <p>A middle-length stay balances research time against time away from Earth.</p>
+            <p>This total is only the sum of the values selected above.</p>
             <small>
-              Limits: this model assumes the return takes as long as the outbound trip and ignores
-              planet alignment, so it is a teaching tool, not a flight plan.
+              This simple calculator assumes the return transit equals the outbound transit. It
+              omits launch windows, orbital mechanics, surface logistics and other mission phases;
+              it is not a flight plan.
             </small>
           </div>
         </div>
@@ -532,38 +530,38 @@ const systems = [
   {
     name: "Landing System",
     short: "Landing module",
-    lead: "Safely directs the crew from space orbit down to the surface",
-    body: "The atmosphere on Mars is thin, mostly consisting of carbon dioxide and argon. During entry to the planet, your spaceship heats up making it one of many unsolved problems of landing a spacecraft.",
+    lead: "Decelerates and protects the crew and cargo during descent.",
+    body: "Mars's thin atmosphere provides limited braking for large payloads. Entry, descent and landing are among the most demanding parts of a human mission concept.",
   },
   {
     name: "Crew habitat",
     short: "Crew habitat",
-    lead: "Where the four people live, eat, exercise and work on the way to Mars.",
-    body: "Long exposure to a weightless environment can weaken muscles and bones. To avoid this, exercise daily is key to keeping the crew healthy.",
+    lead: "Supports crew living, work, exercise and health monitoring.",
+    body: "A habitat must provide a safe environment for months away from Earth, including life support, sleep, work areas and exercise equipment.",
   },
   {
     name: "Radiation shelter",
     short: "Radiation shield",
-    lead: "A shelter built to withstand solar storms to keep the crew safe.",
-    body: "Radiation outside Earth’s field is dangerous with high exposure. Solutions are still being researched.",
+    lead: "Provides a more protected area during elevated radiation events.",
+    body: "Space radiation is a serious design concern. Shielding approaches involve trade-offs in mass and materials; no protection system is specified in this concept.",
   },
   {
     name: "Supply module",
     short: "Supply module",
-    lead: "Stores essential needs like food, repair parts, and water.",
-    body: "Launching spacecrafts is expensive, so the crew needs to save and recycle essential items they can’t get during their journey.",
+    lead: "Carries food, spares, tools and other mission supplies.",
+    body: "Supply planning depends on crew size, mission duration and system reliability. Recycling can reduce some needs, but not every resource can be recovered completely.",
   },
   {
-    name: "Propulsion System",
+    name: "Propulsion system",
     short: "Propulsion system",
-    lead: "Launches the spacecraft out of Earth's orbit towards Mars using powerful thrusters.",
-    body: "Space exploration agencies have researched multiple engine types. AURORA does not choose one, because that needs engineering analysis and testing.",
+    lead: "Changes the spacecraft's speed and direction during flight.",
+    body: "Mission propulsion depends on trajectory, spacecraft mass and technology. The launch vehicle and in-space propulsion are distinct systems; this concept selects neither.",
   },
   {
     name: "Solar arrays",
     short: "Solar arrays",
-    lead: "Converts sunlight into renewable energy for equipment, lights, and vitals.",
-    body: "Mars is approximately 1.5 gravitational units or 1.5 times farther from the sun than Earth. This creates large dust storms and scattered debris.",
+    lead: "Can generate electrical power from sunlight.",
+    body: "Mars receives less sunlight than Earth because it orbits farther from the Sun. Dust and other environmental conditions can affect surface power systems.",
   },
 ];
 
@@ -577,8 +575,8 @@ function SpacecraftDiagram({
   return (
     <div
       className="ship-diagram"
-      role="img"
-      aria-label="A side view of a typical Mars spacecraft with six labeled parts: Landing module at the front, crew habitat, radiation shelter, supply module, propulsion system, and solar arrays along the top-side and bottom-side. The same information is in the list next to this diagram."
+      role="group"
+      aria-label="Interactive conceptual spacecraft diagram; not to scale."
     >
       <div className="solar-array top-array" />
       <div className="solar-array bottom-array" />
@@ -610,13 +608,13 @@ function Spacecraft({ go }: { go: (page: Page) => void }) {
       <InteriorHero
         index="02"
         kicker="Technology"
-        title="CONNECTED SYSTEMS, DISTINCT ROLES."
-        text="A Mars mission crew depends on launch, entry and exit, life support, communication, navigation, and return capabilities. This page represents the roles those systems support in the AURORA concept."
+        title="Connected systems, distinct roles"
+        text="A human Mars mission would depend on reliable transportation, life support, communications, surface systems and a return capability. This concept explores those roles without specifying a real vehicle."
         image={images.planet}
       />
       <div className="disclaimer wrap">
-        <span>CONCEPT NOTICE</span>
-        <p>The descriptions are fictional. They do not represent actual spacecraft designs.</p>
+        <span>Concept note</span>
+        <p>This conceptual diagram is not an actual spacecraft design.</p>
       </div>
       <section className="systems-section wrap">
         <SectionTitle
@@ -648,8 +646,8 @@ function Spacecraft({ go }: { go: (page: Page) => void }) {
           ))}
         </div>
         <p className="source-note">
-          NASA/JPL-Caltech, PIA 14832 — Artist’s concept of Curiosity approaching Mars. This depicts
-          a robotic mission, not the AURORA spacecraft shown below. NASA image record.
+          The diagram is an original illustration, not a spacecraft design. The NASA spacecraft
+          image depicts a robotic mission concept, not AURORA.
         </p>
       </section>
       <PageLinks
@@ -663,32 +661,32 @@ function Spacecraft({ go }: { go: (page: Page) => void }) {
 
 const crew = [
   {
-    initials: "NM",
-    name: "Njeri Mwangi",
-    role: "Commander",
-    origin: "Nairobi, Kenya",
-    bio: "Black Female Commander. Born in Nairobi, Kenya and immigrated to the United States to teach chemistry at Princeton University. Soon went to work on the Artemis Vl mission, then helped test multiple Mars environments and probes, to later get promoted to the Aurora space exploration program.",
+    initials: "01",
+    name: "Mission commander",
+    role: "Leadership",
+    origin: "Fictional role",
+    bio: "Coordinates decisions, crew operations and communication across the mission. A commander would need experience leading teams in complex, high-risk environments.",
   },
   {
-    initials: "HY",
-    name: "Hiroto Yamazaki",
-    role: "Doctor & Scientist",
-    origin: "Hiroshima, Japan",
-    bio: "Japanese Male Doctor and Scientist. Born in Hiroshima Japan, he studied sports medicine at the University of Tokyo, where he also learnt English. Eventually the Aurora space exploration program recruited him.",
+    initials: "02",
+    name: "Flight surgeon",
+    role: "Crew health",
+    origin: "Fictional role",
+    bio: "Supports crew health before, during and after the mission. Medical planning must account for limited equipment, delayed communication and the effects of long-duration spaceflight.",
   },
   {
-    initials: "GL",
-    name: "Gonzales Lacasa",
-    role: "Pilot",
-    origin: "Mexico City, Mexico",
-    bio: "Mexican Pilot. He was Born in Mexico City, Mexico. When he turned 14, his parents immigrated to the United States for better job opportunities. He got very interested in his fathers passion about the sky, and birds. He studied aerospace piloting for years to later apply for the US Air Force. He made it in and once he got too old to fly these types of jets, he applied for AURORA and got accepted to later become a pilot for Aurora.",
+    initials: "03",
+    name: "Geologist",
+    role: "Planetary science",
+    origin: "Fictional role",
+    bio: "Studies rocks, landforms and the history of water on Mars. Field observations and carefully selected samples could help scientists investigate the planet's past environments.",
   },
   {
-    initials: "LS",
-    name: "Logan Smith",
-    role: "Flight Engineer",
-    origin: "Burlington, Vermont",
-    bio: "Flight Engineer. Logan was born in Burlington, Vermont. He had great interest in mechanics, and generally how things work, from a very young age. When he entered the portal for a flight mechanics camp through his middle school, he discovered his strengths and was off to the races.",
+    initials: "04",
+    name: "Flight systems engineer",
+    role: "Engineering",
+    origin: "Fictional role",
+    bio: "Monitors and maintains spacecraft and surface systems. Engineering plans must anticipate equipment failures and enable the crew to diagnose and repair problems far from Earth.",
   },
 ];
 
@@ -697,13 +695,18 @@ function Crew({ go }: { go: (page: Page) => void }) {
     <>
       <InteriorHero
         index="03"
-        kicker="Crew roster"
-        title="THE FOUR WHO WOULD GO"
-        text="Real expeditions succeed because the people and machines work together with little mistakes. These crew members are not real. However each one stands for a skill set this type of mission would need."
+        kicker="Mission roles"
+        title="A team built around complementary skills"
+        text="These are illustrative roles, not a real crew or a proposed crew size. A human mission would require expertise across health, science, engineering and operations."
         image={images.terrain}
       />
       <section className="crew-section wrap">
-        <SectionTitle kicker="Meet the crew" index="01" title="One team. Four disciplines." />
+        <SectionTitle
+          kicker="Illustrative roles"
+          index="01"
+          title="Different expertise, shared responsibility."
+          intro="The profiles below describe capabilities a mission might need; they do not represent real or selected astronauts."
+        />
         <div className="crew-grid">
           {crew.map((person, i) => (
             <article key={person.name}>
@@ -712,7 +715,7 @@ function Crew({ go }: { go: (page: Page) => void }) {
                 <i />
               </div>
               <div className="crew-id">
-                <span>CREW–0{i + 1}</span>
+                <span>Role 0{i + 1}</span>
                 <b>{person.role}</b>
               </div>
               <h3>{person.name}</h3>
@@ -725,22 +728,18 @@ function Crew({ go }: { go: (page: Page) => void }) {
       <section className="expertise-banner">
         <div className="wrap">
           <Kicker index="02">Team architecture</Kicker>
-          <h2>Several Skill Sets Are Required.</h2>
+          <h2>Mission design is a team effort.</h2>
           <p>
-            A Mars team would need science, medicine, piloting, and engineering experience and
-            practice to be a successful team under high pressure situations.
+            In addition to these examples, a real program would draw on expertise in robotics,
+            communications, operations, psychology and many other fields.
           </p>
           <small>
-            These profiles are fictional and do not represent any astronauts or selected people
+            These are example roles only—not an announced crew or staffing plan.
           </small>
         </div>
       </section>
       <div className="wrap">
-        <p className="source-note">
-          NASA/JPL-Caltech, PIA 17948 — A view of the Mars landscape from the Curiosity mission.
-          This is a real NASA rover image, not a portrait of AURORA’s fictional crew. NASA image
-          record.
-        </p>
+        <p className="source-note">NASA rover imagery; see Sources for image credits.</p>
       </div>
       <PageLinks
         go={go}
@@ -753,16 +752,16 @@ function Crew({ go }: { go: (page: Page) => void }) {
 
 const researchQuestions = [
   [
-    "What equipment is needed for Mars exploration?",
-    "What systems and equipment would be necessary for Mars surface operations, and what measurements would they provide?",
+    "What can Martian rocks tell us about past environments?",
+    "Which minerals and geological features can help reconstruct when liquid water was present and what conditions may have existed?",
   ],
   [
-    "What life-forms have been discovered on Mars?",
-    "What effect do these life forms have on the actual planet and atmosphere around it?",
+    "Could Mars ever have supported microbial life?",
+    "No life has been confirmed on Mars. How could future missions search responsibly for evidence of past or present microbial life?",
   ],
   [
-    "How should Martian sites be managed?",
-    "What routines and procedures could countries do to make a safer trip?",
+    "How can exploration protect Mars and Earth?",
+    "What practices can help avoid contaminating places of scientific interest and protect Earth when samples are returned?",
   ],
 ];
 
@@ -772,12 +771,12 @@ function Research({ go }: { go: (page: Page) => void }) {
       <InteriorHero
         index="04"
         kicker="Research questions"
-        title="WHAT WE STILL WANT TO KNOW"
+        title="What we still want to know"
         text="Mars still has unsolved mysteries. Here are a few questions worth investigating."
         image={images.surface}
       />
       <section className="research-section wrap">
-        <SectionTitle kicker="Want More Information?" index="01" title="Open questions" />
+        <SectionTitle         kicker="Mars science" index="01" title="Open questions" />
         <div className="question-list">
           {researchQuestions.map(([title, text], i) => (
             <article key={title}>
@@ -789,49 +788,45 @@ function Research({ go }: { go: (page: Page) => void }) {
             </article>
           ))}
         </div>
-        <p className="source-note">
-          NASA/JPL-Caltech, PIA 17948 — Martian landscape with rock rows and Mount Sharp (stereo).
-          NASA image record.
-        </p>
+        <p className="source-note">NASA rover imagery; see Sources for image credits.</p>
       </section>
       <section className="research-principles">
         <div className="wrap principles-grid">
           <article>
             <span>01</span>
-            <h3>Data Should Be Available For Review</h3>
+            <h3>Make evidence traceable</h3>
             <p>
-              Clear reporting makes it easy to access data about mission strategy, cost,
-              limitations, and results. Public findings and international cooperation are also
-              careful considerations.
+              Clear methods, accessible data and careful citations help readers assess scientific
+              findings and understand their limits.
             </p>
             <small>
-              AURORA is a fictional educational concept. It is not an agency, active mission, or
-              launch schedule.
+              AURORA is an independent educational concept. It is not an agency, active mission
+              or launch schedule.
             </small>
           </article>
           <article>
             <span>02</span>
-            <h3>Research Beyond Earth Has Its Limits</h3>
+            <h3>Exploration has real trade-offs</h3>
             <p>
-              Work on science, life support, medicine, and materials may inform research on Earth.
-              Although this does not translate into direct benefits.
+              Human spaceflight involves significant technical, financial and health risks.
+              Scientific goals, planetary protection and public priorities all matter.
             </p>
             <small>
-              Space Exploration involves dangerous risks and heavy costs. Future goals on
-              exploration should be decided on science goals, public opinion, crew safety, and cost.
+              This site describes open questions; it does not claim that a crewed mission is
+              currently planned.
             </small>
           </article>
         </div>
       </section>
       <div className="wrap source-cta">
         <button onClick={() => go("reference")}>
-          Our sources <Arrow />
+          Sources and credits <Arrow />
         </button>
       </div>
       <PageLinks
         go={go}
         previous={{ id: "crew", label: "Crew" }}
-        next={{ id: "reference", label: "Reference" }}
+        next={{ id: "community", label: "Education" }}
       />
     </>
   );
@@ -870,13 +865,13 @@ function Community({ go }: { go: (page: Page) => void }) {
       <InteriorHero
         index="05"
         kicker="Classroom and community"
-        title="MARS IDEAS START CLOSE TO HOME."
-        text="Community and school products invite younger students to think about Mars in"
+        title="Mars ideas start close to home"
+        text="Use these sample prompts to help students explore planetary science, engineering and the questions behind space exploration."
         image={images.terrain}
       />
       <section className="gallery-section wrap">
         <SectionTitle
-          kicker="A sample community gallery"
+          kicker="A sample classroom gallery"
           index="01"
           title="Ideas from the next generation"
           intro="These are made-up example posts to show how a future school or community showcase could look. The artwork is illustrative, not submitted by real students."
@@ -930,16 +925,15 @@ function Community({ go }: { go: (page: Page) => void }) {
             </p>
           </aside>
           <p className="source-note">
-            From the NASA archive — NASA/JPL-Caltech/MSSS, PIA 20602 — Curiosity self-portrait at
-            the Okoruso drill hole. This NASA archive image is separate from the fictional sample
-            posts above. NASA image record.
+            The illustrations above are original CSS artwork. The Mars photograph is a NASA rover
+            image, separate from the sample classroom gallery.
           </p>
         </div>
       </section>
       <PageLinks
         go={go}
         previous={{ id: "research", label: "Research" }}
-        next={{ id: "reference", label: "Reference" }}
+        next={{ id: "reference", label: "Sources" }}
       />
     </>
   );
@@ -951,62 +945,43 @@ function Reference({ go }: { go: (page: Page) => void }) {
       <InteriorHero
         index="06"
         kicker="Sources and credits"
-        title="REFERENCE"
-        text="Where our facts came from, what is original to this project, and the required TSA documents."
+        title="Sources & notes"
+        text="Explore the sources behind the science summaries, image credits and notes on this educational concept."
         image={images.mars}
       />
       <section className="reference-section wrap">
-        <div className="document-row">
-          <SectionTitle kicker="Required documents" index="01" title="Project files" />
-          <div>
-            <button>
-              Student Copyright Checklist (PDF) <Arrow />
-            </button>
-            <button>
-              Work Log (PDF) <Arrow />
-            </button>
-          </div>
-        </div>
         <div className="reference-block">
-          <Kicker index="02">Sources for facts</Kicker>
-          <h2>Facts are written in our own words.</h2>
-          <p>No text was copied from these pages.</p>
+          <Kicker index="01">Sources for facts</Kicker>
+          <h2>Start with primary sources.</h2>
+          <p>Fact summaries are paraphrased. Follow these links to the source material.</p>
           <article>
-            <a href="https://esa.int/Our_Activities/Space_Science/Mars_Express/Facts_about_Mars">
-              esa.int/Our_Activities/Space_Science/Mars_Express/Facts_about_Mars
+            <a href="https://science.nasa.gov/mars/facts/" target="_blank" rel="noreferrer">
+              NASA — Mars Facts
             </a>
             <p>
-              Used for: length of a sol (24 h 37 min), surface gravity (3.711 m/s²), atmosphere
-              (95.32% carbon dioxide), diameter (6,794 km) and orbital period (687 Earth days). The
-              “about 38% of Earth’s gravity” figure is our own calculation: 3.711 divided by 9.81.
+              Reference for Mars's average distance from the Sun, size, rotation period, orbital
+              period and potential for past life.
             </p>
           </article>
           <article>
-            <a href="https://nssdc.gsfc.nasa.gov/planetary/mars/marslaun.html">
-              nssdc.gsfc.nasa.gov/planetary/mars/marslaun.html
+            <a href="https://science.nasa.gov/mars/" target="_blank" rel="noreferrer">
+              NASA — Mars exploration
             </a>
             <p>
-              Used for: launch windows about every 26 months, and the fast trajectory of about 180
-              days described in NASA mission planning.
+              Background on robotic exploration and the science questions that guide Mars missions.
             </p>
           </article>
           <article>
-            <b>Statements without a listed source</b>
+            <b>Model assumptions</b>
             <p>
-              General statements about radiation, weakened muscles and bones in weightlessness, thin
-              Martian air during landing, weaker sunlight at Mars, planetary protection, and radio
-              delay are widely known. The same goes for the relative orbit distances in the Overview
-              drawing (about 0.4, 0.7, 1.0 and 1.5 times Earth’s distance from the Sun for Mercury,
-              Venus, Earth and Mars) and the shape of the transfer path. They have not yet been tied
-              to a specific source on this page. The team still needs to add a citation for each
-              one.
+              The trip-length calculator uses example values selected for comparison. Its totals
+              are arithmetic only; they are not based on a mission design or trajectory analysis.
             </p>
           </article>
-          <p className="single-cite">One cite i used is science.nasa.gov</p>
         </div>
         <div className="reference-block">
-          <Kicker index="03">Images, fonts and media</Kicker>
-          <h2>Source and rights</h2>
+          <Kicker index="02">Image and media credits</Kicker>
+          <h2>Images and media credits</h2>
           <div className="credit-table">
             <div className="table-head">
               <span>Item</span>
@@ -1015,73 +990,88 @@ function Reference({ go }: { go: (page: Page) => void }) {
             </div>
             {[
               [
-                "Solar system path illustration",
+                "Global Color Views of Mars, PIA 00407",
                 "Overview",
-                "Drawn in SVG code inside index.html. No outside image used.",
+                "NASA/JPL/USGS. NASA image record.",
+                "https://images.nasa.gov/details/PIA00407",
+              ],
+              [
+                "Solar system diagram",
+                "Overview",
+                "Original CSS/SVG illustration; not to scale and not a trajectory.",
               ],
               [
                 "Spacecraft diagram",
                 "Spacecraft",
-                "Drawn in SVG code inside spacecraft.html. A concept drawing, not a real design.",
+                "Original CSS illustration; a concept diagram, not a real spacecraft design.",
               ],
-              ["Crew icons", "Crew", "Simple SVG circles with initials. No photos of real people."],
+              [
+                "Classroom gallery",
+                "Education",
+                "Original CSS illustrations; sample activities, not student submissions.",
+              ],
+              [
+                "Martian Landscape With Rock Rows and Mount Sharp Stereo, PIA 17948",
+                "Mission, Crew, Research",
+                "NASA/JPL-Caltech. NASA image record.",
+                "https://images.nasa.gov/details/PIA17948",
+              ],
+              [
+                "Curiosity Approaching Mars, Artist Concept, PIA 14832",
+                "Spacecraft",
+                "NASA/JPL-Caltech. NASA image record. Robotic mission concept.",
+                "https://images.nasa.gov/details/PIA14832",
+              ],
+              [
+                "Hello, MAHLI, PIA 16161",
+                "Education",
+                "NASA/JPL-Caltech/MSSS. NASA image record.",
+                "https://images.nasa.gov/details/PIA16161",
+              ],
               [
                 "Fonts",
                 "All pages",
-                "Fonts already installed on the viewer’s device. No font files are downloaded.",
-              ],
-              [
-                "Martian Landscape With Rock Rows and Mount Sharp (Stereo), PIA 17948",
-                "Overview, Crew, Research",
-                "NASA/JPL-Caltech. NASA image record.",
-              ],
-              [
-                "Curiosity Approaching Mars, Artist’s Concept, PIA 14832",
-                "Mission, Spacecraft",
-                "NASA/JPL-Caltech. NASA image record.",
-              ],
-              [
-                "Curiosity Self-Portrait at Okoruso Drill Hole, PIA 20602",
-                "Community",
-                "NASA/JPL-Caltech/MSSS. NASA image record.",
+                "Google Fonts (Barlow Condensed, IBM Plex Mono and Inter).",
               ],
               ["Audio and video", "None", "None used."],
             ].map((row) => (
               <div key={row[0]}>
                 <span>{row[0]}</span>
                 <span>{row[1]}</span>
-                <span>{row[2]}</span>
+                <span>
+                  {row[2]}
+                  {row[3] && (
+                    <>
+                      {" "}
+                      <a href={row[3]} target="_blank" rel="noreferrer">
+                        View image record
+                      </a>
+                    </>
+                  )}
+                </span>
               </div>
             ))}
           </div>
           <p>
-            Archive images load directly from NASA’s image servers and require an internet
-            connection. Captions identify the image credit and link to each NASA record.
+            NASA photographs load from NASA's image archive and require an internet connection.
           </p>
         </div>
         <div className="reference-block">
-          <Kicker index="04">How the site is built</Kicker>
+          <Kicker index="03">How the site is built</Kicker>
           <h2>Project notes</h2>
           <p>
-            The site uses plain HTML, CSS and JavaScript. It uses no framework, no template and no
-            theme, and it loads no outside libraries. NASA archive images load directly from NASA’s
-            image servers; all other files are local. It collects no personal information.
+            AURORA is an independent educational concept. The site is built with React, TypeScript,
+            Vite and CSS. It does not claim affiliation with NASA, ESA or any space agency.
           </p>
           <p>
-            AURORA is a fictional concept for education. It is not endorsed by NASA, ESA or any
-            other agency.
+            This site does not provide mission, medical or engineering advice. No real crew,
+            spacecraft, launch date or mission plan is represented.
           </p>
-          <aside className="team-note">
-            Team to complete before submission: confirm who wrote and made each part of the site,
-            and add any outside help or tools the team used, as your advisor and the TSA rules
-            require. Then delete this box. This statement was not written by the team and must not
-            be left as is.
-          </aside>
         </div>
       </section>
       <PageLinks
         go={go}
-        previous={{ id: "research", label: "Research" }}
+        previous={{ id: "community", label: "Education" }}
         next={{ id: "overview", label: "Back to Overview" }}
       />
     </>
@@ -1154,7 +1144,7 @@ function App() {
           </button>
           <div className="mission-status">
             <i />
-            MISSION CONCEPT <span>ACTIVE</span>
+            Independent <span>educational concept</span>
           </div>
           <nav className={menuOpen ? "open" : ""} aria-label="Primary navigation">
             {pages.map((item) => (
@@ -1172,7 +1162,7 @@ function App() {
             onClick={() => setMenuOpen((value) => !value)}
             aria-expanded={menuOpen}
           >
-            MENU <span>{menuOpen ? "×" : "+"}</span>
+            Menu <span>{menuOpen ? "×" : "+"}</span>
           </button>
         </div>
       </header>
@@ -1186,14 +1176,14 @@ function App() {
             <span>AURORA</span>
           </div>
           <p>
-            AURORA is a fictional (Technology Student Association) project about Mars exploration,
-            not a real mission or spacecraft program.
+            AURORA is an independent educational concept about human exploration of Mars. It is not
+            a real mission, spacecraft program or agency.
           </p>
           <div>
-            <span>EDUCATIONAL CONCEPT</span>
-            <b>NOT A REAL MISSION</b>
+            <span>Educational concept</span>
+            <b>Not a real mission</b>
           </div>
-          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>TOP ↑</button>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Back to top ↑</button>
         </div>
       </footer>
     </main>
