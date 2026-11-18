@@ -184,7 +184,7 @@ nav button {
   color: #9aa4b1;
   font: 600 10px/1 "Barlow Condensed";
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 nav button::after {
   content: "";
@@ -221,7 +221,7 @@ svg {
   color: var(--blue);
   font: 500 9px/1 "IBM Plex Mono";
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .kicker span {
   color: var(--red);
@@ -279,7 +279,7 @@ svg {
   gap: 28px;
   font: 600 10px/1 "Barlow Condensed";
   letter-spacing: 0.11em;
-  text-transform: uppercase;
+  text-transform: none;
   transition: 0.2s;
 }
 .primary-btn {
@@ -425,7 +425,7 @@ svg {
 .hero-caption p {
   margin: 0;
   color: #758391;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .hero-caption b {
   font-weight: 500;
@@ -436,7 +436,7 @@ svg {
   margin: 18px 0 0;
   font: 700 clamp(38px, 4.2vw, 60px)/0.95 "Barlow Condensed";
   letter-spacing: -0.025em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .section-title > p {
   max-width: 600px;
@@ -591,7 +591,7 @@ svg {
   margin: 0;
   font: 600 20px/1 "Barlow Condensed";
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .discipline-symbol {
   align-self: center;
@@ -669,7 +669,7 @@ svg {
   color: #9ca8b4;
   font: 600 11px/1 "Barlow Condensed";
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .facts-grid strong {
   display: block;
@@ -732,7 +732,7 @@ svg {
 .path-grid h3 {
   margin: 0 0 10px;
   font: 600 24px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .path-grid p {
   margin: 0;
@@ -818,7 +818,7 @@ svg {
 }
 .number-list aside b {
   font: 600 12px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.08em;
 }
 .number-list aside p {
@@ -861,7 +861,7 @@ svg {
 .timeline h3 {
   margin: 18px 0 12px;
   font: 600 22px/1.1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .timeline p {
   margin: 0;
@@ -885,7 +885,7 @@ svg {
   color: #9ba6b2;
   font: 500 9px/1 "IBM Plex Mono";
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .planner-controls > button {
   width: 100%;
@@ -905,7 +905,7 @@ svg {
 }
 .planner-controls button span {
   font: 600 16px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .planner-controls button b {
   color: var(--red);
@@ -925,7 +925,7 @@ svg {
 }
 .fuel-key > b {
   font: 600 12px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .fuel-key p {
   color: var(--muted);
@@ -1194,12 +1194,12 @@ input[type="range"] {
   margin-top: 50px;
   color: var(--blue);
   font: 500 8px/1 "IBM Plex Mono";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .system-panel h3 {
   margin: 13px 0 20px;
   font: 700 38px/0.95 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .system-panel strong {
   font: 500 16px/1.35 "Barlow Condensed";
@@ -1224,7 +1224,7 @@ input[type="range"] {
   background: transparent;
   color: #7e8a96;
   font: 600 10px/1.2 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .system-tabs button:last-child {
   border: 0;
@@ -1315,12 +1315,12 @@ input[type="range"] {
 .crew-id b {
   color: var(--blue);
   font-weight: 500;
-  text-transform: uppercase;
+  text-transform: none;
 }
 .crew-grid h3 {
   margin: 19px 0 3px;
   font: 700 28px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .crew-grid small {
   color: #697684;
@@ -1343,7 +1343,7 @@ input[type="range"] {
   max-width: 760px;
   margin: 20px 0 16px;
   font: 700 58px/0.95 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .expertise-banner p {
   max-width: 650px;
@@ -1377,7 +1377,7 @@ input[type="range"] {
 .question-list h3 {
   margin: 0 0 10px;
   font: 600 26px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .question-list p {
   margin: 0;
@@ -1407,7 +1407,7 @@ input[type="range"] {
   margin: 50px 0 18px;
   max-width: 440px;
   font: 700 34px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .principles-grid p {
   color: #a0aab5;
@@ -1435,7 +1435,7 @@ input[type="range"] {
   border: 1px solid var(--red);
   background: var(--red);
   font: 600 10px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.1em;
 }
 
@@ -1506,12 +1506,12 @@ input[type="range"] {
   margin: 21px 22px 0;
   color: var(--red);
   font: 500 7px/1 "IBM Plex Mono";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .gallery-grid h3 {
   margin: 12px 22px 10px;
   font: 600 24px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .gallery-grid p {
   margin: 0 22px;
@@ -1540,7 +1540,7 @@ input[type="range"] {
 .classroom-steps h3 {
   margin: 40px 0 12px;
   font: 600 27px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .classroom-steps p {
   color: var(--muted);
@@ -1557,7 +1557,7 @@ input[type="range"] {
 }
 .safety-note b {
   font: 600 15px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .safety-note p {
   margin: 0;
@@ -1588,7 +1588,7 @@ input[type="range"] {
   border: 1px solid var(--line);
   background: var(--panel);
   font: 600 13px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .document-row button:hover {
   border-color: var(--red);
@@ -1600,7 +1600,7 @@ input[type="range"] {
 .reference-block > h2 {
   margin: 20px 0 10px;
   font: 700 43px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .reference-block > p {
   max-width: 800px;
@@ -1621,7 +1621,7 @@ input[type="range"] {
 }
 .reference-block article b {
   font: 600 13px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .reference-block article p {
   margin-bottom: 0;
@@ -1662,7 +1662,7 @@ input[type="range"] {
 .credit-table .table-head span {
   color: var(--blue);
   font: 500 8px/1 "IBM Plex Mono";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .team-note {
   max-width: 920px;
@@ -1706,12 +1706,12 @@ input[type="range"] {
 .page-links span {
   color: #626f7e;
   font: 500 7px/1 "IBM Plex Mono";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .page-links b {
   margin-top: 8px;
   font: 600 22px/1 "Barlow Condensed";
-  text-transform: uppercase;
+  text-transform: none;
 }
 .page-links button:hover b {
   color: var(--red);
@@ -2244,38 +2244,6 @@ input:focus-visible {
   .hero-visual {
     min-height: 420px;
   }
-}
-
-nav button,
-.kicker,
-.primary-btn,
-.quiet-btn,
-.mission-stamp > *,
-.visual-data,
-.hero-caption,
-.discipline-row h3,
-.facts-grid h3,
-.number-list aside b,
-.planner-controls > label,
-.planner-controls button span,
-.fuel-key > b,
-.system-panel small,
-.system-panel h3,
-.system-tabs button,
-.crew-id,
-.expertise-banner h2,
-.source-cta button,
-.gallery-grid small,
-.classroom-steps h3,
-.safety-note b,
-.document-row button,
-.reference-block article b,
-.credit-table .table-head span,
-.page-links span,
-.page-links b,
-.footer-grid > div:nth-child(3),
-.footer-grid > button {
-  text-transform: none;
 }
 
 nav button,
